@@ -1,0 +1,11 @@
+{
+  "name": "sql-fundamentals",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@electric-sql/pglite": "^0.4.4"
+  }
+}
