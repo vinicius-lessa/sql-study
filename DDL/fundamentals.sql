@@ -54,3 +54,11 @@ REFERENCES dealerships(id);
 
 -- Drop the cars table
 DROP TABLE IF EXISTS cars;
+
+-- Drop not null constraint from dealership_id column
+ALTER TABLE cars
+ALTER COLUMN dealership_id DROP NOT NULL;
+
+-- Drop the dealership_fk foreign key constraint
+ALTER TABLE cars
+DROP CONSTRAINT IF EXISTS dealership_fk;
