@@ -23,3 +23,16 @@ WHERE id = 1;
 -- DELETE statement is used to delete records from a table
 DELETE FROM cars 
 WHERE id = 2;
+
+---------------------------------------------------------------------------------
+-- CASE statement in UPDATE is used to create conditional logic on values being updated
+
+-- Update price of cars based on their dealership
+UPDATE cars 
+SET price = price * CASE
+	WHEN dealership_id = 1 THEN 1.20
+	WHEN dealership_id = 3 THEN 0.80
+	ELSE 1
+END
+WHERE
+	sold IS FALSE;
